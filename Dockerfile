@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y \
     python-dev \
     python-pip
 
-RUN pip install flask flask-restful
+RUN pip install Werkzeug==0.14.1 flask flask-restful 
 
 WORKDIR /home
 RUN wget -O - http://deb.openalpr.com/openalpr.gpg.key | sudo apt-key add -
