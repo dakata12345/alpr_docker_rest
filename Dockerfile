@@ -26,8 +26,8 @@ RUN apt-get update
 RUN apt-get install -y -f openalpr openalpr-daemon openalpr-utils libopenalpr-dev
 
 WORKDIR /home
-RUN git clone https://github.com/mbartoli/restful-alpr
-WORKDIR /home/restful-alpr/alpr
+RUN git clone https://github.com/dakata12345/alpr_docker_rest.git
+WORKDIR /home/alpr_docker_rest/alpr
 
 EXPOSE 5000
 CMD ["python", "restful-alpr.py"]
